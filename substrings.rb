@@ -6,13 +6,13 @@ def substrings(string, array)
 	frequencies = Hash.new(0)
 	counter = 0
 
-	while counter < words.length do
+	while counter < words.length do #iterate over the words array
 			array.each do |ss|
-				if words[counter].include? ss
-					frequencies[ss] +=1
+				if words[counter].include? ss #check if current word includes substring
+					frequencies[ss] +=1 #add substring to hash and count number of times it appears
 				end
 			end
-		counter += 1
+		counter += 1 #move to the next element in the words array
 	end
 
 	return frequencies
